@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/uno"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/black"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dos"/>
+    <LinearLayout
+        android:id="@+id/dos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        android:orientation="vertical"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintTop_toBottomOf="@+id/uno"
+        app:layout_constraintBottom_toTopOf="@id/tres"/>
+    <LinearLayout
+        android:id="@+id/tres"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        app:layout_constraintVertical_weight="4"
+        app:layout_constraintTop_toBottomOf="@id/dos"
+        app:layout_constraintBottom_toTopOf="@id/cuatro">
+
+        <LinearLayout
+            android:id="@+id/tres_uno"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/tres_dos"
+            android:orientation="horizontal"
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/tres_tres"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cuatro"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        android:orientation="vertical"
+        app:layout_constraintVertical_weight="2"
+        app:layout_constraintTop_toBottomOf="@id/tres"
+        app:layout_constraintBottom_toTopOf="@id/cinco"/>
+    <LinearLayout
+        android:id="@+id/cinco"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/black"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/cuatro"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
